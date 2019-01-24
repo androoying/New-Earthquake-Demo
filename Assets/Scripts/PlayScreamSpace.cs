@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic; 
+using UnityEngine;
+
+public class PlayScreamSpace : MonoBehaviour {
+    public AmbisonicsSystem ambSys;
+    public string file;
+    public string id;
+    public float volume;
+
+    // Use this for initialization
+    void Start () {
+        ambSys.StartSystem();
+        ambSys.Add(id, file, volume);
+    }
+	
+	// Update is called once per frame
+	void Update () {
+		AudioSource audioData; 
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			Debug.Log("space pressed");
+			//audioData = GetComponent<AudioSource>();
+			//audioData.Play(0);
+            ambSys.StartSound(id, true);
+        }
+	}
+}
