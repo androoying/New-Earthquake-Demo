@@ -16,13 +16,11 @@ public class PlayScreamSpace : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		AudioSource audioData; 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			Debug.Log("space pressed");
-			//audioData = GetComponent<AudioSource>();
-			//audioData.Play(0);
-            ambSys.StartSound(id, true);
+            ambSys.StartSound(id, false);
+            ambSys.Shake((float)0.5);
         }
 	}
 }

@@ -105,6 +105,7 @@ public class AmbisonicsSystem : MonoBehaviour {
         SendCommand("speakers /Users/worldviz/Desktop/sound-system/auralizer/speakers-link.txt");
         SendCommand("test none");
         SendCommand("stopall");
+        SendCommand("test shakers");
     }
 
     public void StopSystem() {
@@ -130,6 +131,12 @@ public class AmbisonicsSystem : MonoBehaviour {
         string command = "play " + id.ToString() + " " + loop_i.ToString();
         SendCommand(command);
         return true; 
+    }
+
+    public bool Shake(float volume)
+    {
+        SendCommand("shaker" + " " + volume);
+        return true;
     }
 
     public bool StopSound(string name) {
