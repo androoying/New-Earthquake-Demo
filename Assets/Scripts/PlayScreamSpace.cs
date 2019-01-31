@@ -12,6 +12,7 @@ public class PlayScreamSpace : MonoBehaviour {
     void Start () {
         ambSys.StartSystem();
         ambSys.Add(id, file, volume);
+        Debug.Log("id is :" + id);
     }
 	
 	// Update is called once per frame
