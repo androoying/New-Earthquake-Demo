@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WobbleCrate : MonoBehaviour {
+    public Vector3 originPosition;
+    public float shake_speed;
+    public float shake_intensity;
 
-	// Use this for initialization
-	void Start () {
-
+    // Use this for initialization
+    void Start () {
+        originPosition = transform.position;
     }
 	
 	// Update is called once per frame
@@ -30,8 +33,11 @@ public class WobbleCrate : MonoBehaviour {
             if (rb)
             {
                 Debug.Log("found rb");
-                yield return new WaitForSeconds(3);
-                rb.AddExplosionForce(-300, Vector3.zero, 1000.0f, 1.0f);
+                yield return new WaitForSeconds(2);
+                float step = shake_speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, originPosition + Random.insideUnitSphere, step);
+                // rb.position = originPosition + Random.insideUnitSphere * shake_intensity
+                // rb.AddExplosionForce(-300, Vector3.zero, 1000.0f, 1.0f);
             }
         }
     }
