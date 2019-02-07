@@ -21,7 +21,7 @@ public class WobbleCrate : MonoBehaviour {
             Debug.Log("hi");
             SceneManager.LoadScene("MainScene");
         }
-	}
+    }
 
     IEnumerator ShakeBoxes()
     {
