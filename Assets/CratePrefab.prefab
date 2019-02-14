@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f292fb3510f4b4581cbeca3dfdbab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ambSys: {fileID: 0}
+  file: explosion.wav
+  id: explosion
+  volume: 0.6
   originPosition: {x: 0, y: 0, z: 0}
   shake_speed: 10
-  shake_intensity: 20
+  shake_intensity: 30

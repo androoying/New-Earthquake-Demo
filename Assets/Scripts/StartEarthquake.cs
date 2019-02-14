@@ -2,7 +2,7 @@
 using System.Collections.Generic; 
 using UnityEngine;
 
-public class PlayScreamSpace : MonoBehaviour {
+public class StartEarthquake : MonoBehaviour {
     public AmbisonicsSystem ambSys;
     public string file;
     public string id;
@@ -22,6 +22,11 @@ public class PlayScreamSpace : MonoBehaviour {
 			Debug.Log("space pressed");
             ambSys.StartSound(id, false);
             ambSys.Shake((float)0.5);
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Debug.Log("STOP");
+            ambSys.StopSystem();
         }
 	}
 }
