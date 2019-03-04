@@ -26,6 +26,7 @@ public class WobbleCrate : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("hi");
             StartCoroutine(ShakeCoroutine(new Vector3(.2f, .2f, .2f), 5, .5f));
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -62,23 +63,4 @@ public class WobbleCrate : MonoBehaviour {
         rb.AddExplosionForce(-300, Vector3.zero, 1000.0f, 1.0f);
         ambSys.StartSound(id, false);
     }
-
-    //IEnumerator ShakeBoxes()
-    //{
-    //    Vector3 explosionPos = transform.position;
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        Debug.Log("space pressed");
-    //        var rb = GetComponent<Rigidbody>();
-    //        if (rb)
-    //        {
-    //            Debug.Log("found rb");
-    //            yield return new WaitForSeconds(2);
-    //            float step = shake_speed * Time.deltaTime;
-    //            transform.position = Vector3.MoveTowards(transform.position, originPosition + Random.insideUnitSphere, step);
-    //            // rb.position = originPosition + Random.insideUnitSphere * shake_intensity
-    //            // rb.AddExplosionForce(-300, Vector3.zero, 1000.0f, 1.0f);
-    //        }
-    //    }
-    //}
 }
