@@ -8,6 +8,8 @@ public class StartEarthquake : MonoBehaviour {
     public string id;
     public float volume;
 
+    AudioSource audioData;
+
     // Use this for initialization
     void Start () {
         ambSys.StartSystem();
@@ -23,10 +25,19 @@ public class StartEarthquake : MonoBehaviour {
             ambSys.StartSound(id, false);
             ambSys.Shake((float)0.5);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            audioData = GetComponent<AudioSource>();
+            audioData.Play(0);
+        }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             Debug.Log("STOP");
             ambSys.StopSystem();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            audioData.Stop();
         }
 	}
 }

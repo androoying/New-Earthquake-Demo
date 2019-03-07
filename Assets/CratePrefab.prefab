@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1275932387191990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 0.19196, z: 0.65116}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,7 +89,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275932387191990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 71dba5f8b9a67a5459c81163c273f120, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -146,5 +146,5 @@ MonoBehaviour:
   id: explosion
   volume: 0.6
   originPosition: {x: 0, y: 0, z: 0}
-  shake_speed: 10
-  shake_intensity: 30
+  shake_speed: 15
+  shake_intensity: 20
