@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crash : MonoBehaviour
+public class CrashOnFloorCollide : MonoBehaviour
 {
     public AmbisonicsSystem ambSys;
     public string file;
