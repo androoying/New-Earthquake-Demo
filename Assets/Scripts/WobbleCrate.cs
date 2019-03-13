@@ -34,15 +34,18 @@ public class WobbleCrate : MonoBehaviour {
             // Properties p = new Properties(0f, 1f, .5f, 3f, 0f, 1f, 0f);
             // StartCoroutine(ShakeCoroutine(p));
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) // NO AMBISONICS SYSTEM
-        {
-            StartCoroutine(ShakeCoroutine(new Vector3(.2f, .2f, .2f), 5, .5f, false));
-        }
+
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SceneManager.LoadScene("MainScene");
             ambSys.StopSystem();
         }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            StartCoroutine(ShakeCoroutine(new Vector3(.2f, .2f, .2f), 5, .5f, false));
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             SceneManager.LoadScene("MainScene");
