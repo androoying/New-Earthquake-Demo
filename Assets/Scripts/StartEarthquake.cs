@@ -19,23 +19,23 @@ public class StartEarthquake : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			Debug.Log("space pressed");
             ambSys.StartSound(id, false);
             ambSys.Shake((float)0.5);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             audioData = GetComponent<AudioSource>();
             audioData.Play(0);
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("STOP");
             ambSys.StopSystem();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             audioData.Stop();
         }
