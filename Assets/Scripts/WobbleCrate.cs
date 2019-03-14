@@ -40,7 +40,7 @@ public class WobbleCrate : MonoBehaviour {
             SceneManager.LoadScene("MainScene");
             ambSys.StopSystem();
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             StartCoroutine(ShakeCoroutine(new Vector3(.2f, .2f, .2f), 5, .5f, false));
@@ -89,6 +89,10 @@ public class WobbleCrate : MonoBehaviour {
 
     }
 
+    /*
+    * Perlin Noise Box Shake (testing)
+    * adapted from Sebastian Lague https://github.com/SebLague/Camera-Shake 
+    */
     private IEnumerator ShakeCoroutine(Properties properties)
     {
         float completionPercent = 0;
