@@ -19,10 +19,12 @@ public class CrashOnFloorCollide : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Wooden Plank") // col.gameObject.name.Substring(0,11) == "CratePrefab" || 
+        if (col.gameObject.name.Substring(0,11) == "CratePrefab")
         {
             Debug.Log("success");
+            Vector3 collisionLocation = col.GetContact(0);
             ambSys.StartSound(id, false);
+            ambSys.MoveSound(id, collisionLocation);
         }
     }
 }
